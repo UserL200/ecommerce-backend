@@ -15,7 +15,6 @@ import com.ecommerce.model.Order;
 import com.ecommerce.model.OrderItem;
 import com.ecommerce.model.User;
 import com.ecommerce.repository.AddressRepository;
-import com.ecommerce.repository.CartRepository;
 import com.ecommerce.repository.OrderItemRepository;
 import com.ecommerce.repository.OrderRepository;
 import com.ecommerce.repository.UserRepository;
@@ -156,8 +155,8 @@ public class OrderServiceImplementation implements OrderService {
 
 	@Override
 	public void deleteOrder(Long orderId) throws OrderException {
-
-		Order order = findOrderById(orderId);
+		// TODO: fix logic
+		// Order order = findOrderById(orderId);
 		orderRepository.deleteById(orderId);
 	}
 
